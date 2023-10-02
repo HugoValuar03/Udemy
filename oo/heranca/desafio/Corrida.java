@@ -8,8 +8,6 @@ public class Corrida {
 		
 		f.acelerar();
 		f.acelerar();
-		f.acelerar();
-		c.acelerar();
 		c.acelerar();
 		c.acelerar();
 		f.freiar();
