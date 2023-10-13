@@ -13,6 +13,26 @@ public class Produto {
 		
 		
 	}
+	
+	
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public Double getPreco() {
+		return preco;
+	}
+
+
+
+	public Double getDesconto() {
+		return desconto;
+	}
+
+
 
 	@Override
 	public String toString() {
