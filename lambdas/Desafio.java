@@ -1,6 +1,5 @@
 package lambdas;
 
-import java.text.DecimalFormat;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
@@ -16,7 +15,6 @@ public class Desafio {
 		 * 4. Arredondar: Deixar duas casas decimais
 		 * 5. Formatar R$1234,56
 		 */
-		DecimalFormat df = new DecimalFormat("#.00");
 		
 		Function<Produto, Double> precofinal = 
 				produto -> produto.preco * (1 - produto.desconto);
@@ -24,8 +22,8 @@ public class Desafio {
 				preco -> preco >= 2500 ? preco * 1.085 : preco;
 		UnaryOperator<Double> frete = 
 				preco -> preco >= 3000 ? preco + 100 : preco + 50;
-		UnaryOperator<Double> arredondar = 
-				preco -> Double.parseDouble(df.format(preco));
+//		UnaryOperator<Double> arredondar = 
+//				preco -> Double.parseDouble(df.format(preco));
 		Function<Double, String> formatar = 
 				preco -> ("R$" + preco).replace(".", ",");
 		
@@ -34,7 +32,7 @@ public class Desafio {
 		String preco = precofinal
 				.andThen(impostoMunicipal)
 				.andThen(frete)
-				.andThen(arredondar)
+//				.andThen(arredondar)
 				.andThen(formatar)
 				.apply(p);
 		
