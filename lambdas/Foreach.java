@@ -16,7 +16,7 @@ public class Foreach {
 		//Forma tradicional de Foreach
 		
 		System.out.println("\nLambda #01...");
-		aprovados.forEach(nome -> System.out.println(nome + "!!!"));
+		aprovados.forEach(nome -> System.out.println("Meu nome é: " + nome));
 		//Para cada elemento da lista, escreva o elemento + "!!!"
 		
 		System.out.println("\nMethod Reference #01...");
